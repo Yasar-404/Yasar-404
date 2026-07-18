@@ -1,16 +1,26 @@
-## Hi there 👋
-
 <!--
-**Yasar-404/Yasar-404** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+  Yasar-404 · profile README
+  Repo: github.com/Yasar-404/Yasar-404  (special self-titled repo → renders on profile)
+  Built as animated SVG assets. No JS, no external icons. See assets/DESIGN.md.
+  Sprint 1: hero + foundation. Sprints 2–4 add the tech icon system, dividers, and sections.
 -->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
+  <img alt="Yasar K — Design Engineer, Chennai" src="./assets/hero-dark.svg" width="100%">
+</picture>
+
+&nbsp;
+
+I design and build the same interface — so the thing that ships is the thing that was
+designed. UX and product thinking on one side, React and front-of-frontend engineering on
+the other, with no handoff gap in between. Recently: a Next.js / Prisma / TypeScript gym
+management platform, and a production fitness site down to its own particle hero and SEO schema.
+
+<!-- ─────────────────────────────────────────────────────────────
+  SPRINT 2 → Tech + Design stack (custom animated SVG icon system)
+  SPRINT 3 → Animated section dividers · Engineering Philosophy · Current Focus
+  SPRINT 4 → Contact · Footer · full dark/light pass · a11y + reduced-motion audit
+  Each section below gets a hand-built SVG header; none use shields.io / Lucide / etc.
+────────────────────────────────────────────────────────────── -->
