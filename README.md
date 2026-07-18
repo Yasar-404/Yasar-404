@@ -18,9 +18,15 @@ designed. UX and product thinking on one side, React and front-of-frontend engin
 the other, with no handoff gap in between. Recently: a Next.js / Prisma / TypeScript gym
 management platform, and a production fitness site down to its own particle hero and SEO schema.
 
+&nbsp;
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg">
+  <img alt="Stack — Engineering: React, Next.js, TypeScript, JavaScript, Node.js, Prisma, PostgreSQL, Tailwind. Design & tools: Figma, Framer, Motion, Git, GitHub, Terminal" src="./assets/stack-dark.svg" width="100%">
+</picture>
+
 <!-- ─────────────────────────────────────────────────────────────
-  SPRINT 2 → Tech + Design stack (custom animated SVG icon system)
   SPRINT 3 → Animated section dividers · Engineering Philosophy · Current Focus
   SPRINT 4 → Contact · Footer · full dark/light pass · a11y + reduced-motion audit
-  Each section below gets a hand-built SVG header; none use shields.io / Lucide / etc.
 ────────────────────────────────────────────────────────────── -->
