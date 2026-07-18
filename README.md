@@ -13,10 +13,9 @@
 
 &nbsp;
 
-I design and build the same interface — so the thing that ships is the thing that was
-designed. UX and product thinking on one side, React and front-of-frontend engineering on
-the other, with no handoff gap in between. Recently: a Next.js / Prisma / TypeScript gym
-management platform, and a production fitness site down to its own particle hero and SEO schema.
+I don't hand designs to developers—I build them. Product strategy, UX, 
+and frontend engineering combined to create interfaces that look intentional 
+and perform in production.
 
 &nbsp;
 
