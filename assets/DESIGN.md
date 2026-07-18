@@ -44,7 +44,7 @@ A single restrained gradient. Never acid-green, never vermilion.
 
 | Role     | Stack                                                                 | Treatment              |
 |----------|-----------------------------------------------------------------------|------------------------|
-| Display  | `ui-sans-serif, -apple-system, "Segoe UI", Helvetica, Arial`          | weight 300, `-2px` track |
+| Display  | **Unbounded 800**, outlined to vector paths (see `build_hero.py`)      | logotype, `-1.5%` track |
 | Body     | same sans stack                                                       | weight 400             |
 | Label    | `ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace`         | tracked `+6px`, uppercase |
 
