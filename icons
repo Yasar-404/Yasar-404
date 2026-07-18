@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-label="React">
+  <defs><style>
+    .tile{fill:rgba(255,255,255,0.02);stroke:rgba(255,255,255,0.12);stroke-width:1.3}
+    .ic{fill:none;stroke:#D6D6DE;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .dic{fill:none;stroke:#6E8BFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .fic{fill:#D6D6DE} .dic-f{fill:#6E8BFF} .dot{fill:#43E7C4}
+    @media(prefers-color-scheme:light){.tile{fill:rgba(0,0,0,0.015);stroke:rgba(0,0,0,0.11)}.ic{stroke:#33333B}.fic{fill:#33333B}}
+    .g{transform-box:fill-box;transform-origin:center;animation:pop .6s cubic-bezier(.2,.75,.25,1)}
+    @keyframes pop{0%{opacity:0;transform:scale(.9)}100%{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.g{animation:none}}
+  </style></defs>
+  <g class="g"><rect x="9" y="9" width="46" height="46" rx="13" class="tile"/><circle cx="48" cy="16" r="1.8" class="dot"/><ellipse cx="32" cy="32" rx="14" ry="5.5" class="ic" transform="rotate(-22 32 32)"/><ellipse cx="32" cy="32" rx="14" ry="5.5" class="ic" transform="rotate(22 32 32)"/><circle cx="32" cy="32" r="2.6" class="fic"/><g transform="rotate(0 32 32)"><animateTransform attributeName="transform" type="rotate" from="0 32 32" to="360 32 32" dur="7s" repeatCount="indefinite"/><circle cx="46" cy="32" r="2" class="dot"/></g></g>
+</svg>
