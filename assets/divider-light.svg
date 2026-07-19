@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="46" viewBox="0 0 1280 46" fill="none" role="img" aria-label="section divider">
+  <defs><style>
+    .ic{fill:none;stroke:#1A1A20;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .aic{fill:none;stroke:#6E8BFF;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .fic{fill:#1A1A20} .dot{fill:#43E7C4} .adot{fill:#6E8BFF}
+    .idx{font:600 13px/1 ui-monospace,Menlo,monospace;letter-spacing:2px;fill:#6E8BFF}
+    .eyebrow{font:500 14px/1 ui-monospace,Menlo,monospace;letter-spacing:5px;fill:#55555E}
+    .meta{font:500 11px/1 ui-monospace,Menlo,monospace;letter-spacing:3px;fill:#9A9AA4}
+    .lead{font:300 30px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#1A1A20;letter-spacing:-.5px}
+    .num{font:600 13px/1 ui-monospace,Menlo,monospace;letter-spacing:1px;fill:#9A9AA4}
+    .ptitle{font:600 18px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#1A1A20}
+    .pdesc{font:400 13.5px/1.5 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#55555E}
+    .ftitle{font:500 17px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#1A1A20}
+    .fdesc{font:400 13.5px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#55555E}
+    .tag{font:500 11px/1 ui-monospace,Menlo,monospace;letter-spacing:2px;fill:#9A9AA4}
+    .rule{stroke:rgba(0,0,0,0.11);stroke-width:1}
+    .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s ease forwards}
+    .rev{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.75,.25,1) forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes rise{to{opacity:1;transform:none}}
+    @media(prefers-reduced-motion:reduce){.draw{animation:none;stroke-dashoffset:0}.rev{animation:none;opacity:1;transform:none}}
+  </style></defs>
+  <line class="rule draw" x1="40" y1="23" x2="606" y2="23" pathLength="1"/>
+  <line class="rule draw" x1="674" y1="23" x2="1240" y2="23" pathLength="1" style="animation-delay:.1s"/>
+  <g transform="translate(640,23)" class="rev">
+    <rect x="-6" y="-6" width="12" height="12" rx="2" class="aic" transform="rotate(45)">
+      <animateTransform attributeName="transform" type="rotate" from="45" to="405" dur="14s" repeatCount="indefinite"/>
+    </rect>
+    <circle r="1.8" class="dot"/>
+  </g>
+  <circle r="2.6" fill="#FFFFFF" opacity="0">
+    <animate attributeName="cx" values="40;1240" dur="6s" begin="1.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1"/>
+    <animate attributeName="cy" values="23;23" dur="6s" begin="1.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;.9;0" dur="6s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+</svg>
