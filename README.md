@@ -13,11 +13,15 @@
 
 &nbsp;
 
-I don't hand designs to developers—I build them. Product strategy, UX, 
-and frontend engineering combined to create interfaces that look intentional 
-and perform in production.
+I design and build the same interface — so the thing that ships is the thing that was
+designed. UX and product thinking on one side, React and front-of-frontend engineering on
+the other, with no handoff gap in between. Recently: a Next.js / Prisma / TypeScript gym
+management platform, and a production fitness site down to its own particle hero and SEO schema.
 
 &nbsp;
+
+<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
+<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/stack-dark.svg">
@@ -25,7 +29,24 @@ and perform in production.
   <img alt="Stack — Engineering: React, Next.js, TypeScript, JavaScript, Node.js, Prisma, PostgreSQL, Tailwind. Design & tools: Figma, Framer, Motion, Git, GitHub, Terminal" src="./assets/stack-dark.svg" width="100%">
 </picture>
 
+<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
+<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/philosophy-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/philosophy-light.svg">
+  <img alt="Engineering philosophy — Design in code; details are the interface; accessible and fast by default." src="./assets/philosophy-dark.svg" width="100%">
+</picture>
+
+<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
+<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/focus-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/focus-light.svg">
+  <img alt="Current focus — building intelligent business software; custom web applications; design systems and digital products." src="./assets/focus-dark.svg" width="100%">
+</picture>
+
 <!-- ─────────────────────────────────────────────────────────────
-  SPRINT 3 → Animated section dividers · Engineering Philosophy · Current Focus
   SPRINT 4 → Contact · Footer · full dark/light pass · a11y + reduced-motion audit
 ────────────────────────────────────────────────────────────── -->
