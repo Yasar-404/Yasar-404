@@ -13,9 +13,10 @@
 
 &nbsp;
 
-I don't hand designs to developers—I build them. Product strategy, UX, 
-and frontend engineering combined to create interfaces that look intentional 
-and perform in production.
+I design products with intention and build them with code. By combining product thinking, UX design, 
+and frontend engineering, I create digital experiences that are intuitive, scalable, accessible, 
+and built for real users. I enjoy turning complex ideas into polished interfaces 
+that not only look great but also perform reliably in production.
 
 &nbsp;
 
