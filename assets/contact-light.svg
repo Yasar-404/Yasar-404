@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="214" viewBox="0 0 1280 214" fill="none" role="img" aria-label="Contact — portfolio, GitHub, email; available for senior product and UX roles">
+  <title>Contact — portfolio, GitHub, email; available for senior product and UX roles</title>
+  <defs><style>
+    .ic{fill:none;stroke:#1A1A20;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .idx{font:600 13px/1 ui-monospace,Menlo,monospace;letter-spacing:2px;fill:#6E8BFF}
+    .eyebrow{font:500 14px/1 ui-monospace,Menlo,monospace;letter-spacing:5px;fill:#55555E}
+    .lead{font:300 30px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#1A1A20;letter-spacing:-.5px}
+    .sub{font:400 15px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#55555E}
+    .pill{fill:rgba(0,0,0,0.015);stroke:rgba(0,0,0,0.11);stroke-width:1.2}
+    .plbl{font:500 13px/1 ui-monospace,Menlo,monospace;letter-spacing:1px;fill:#1A1A20}
+    .foot{font:500 12px/1 ui-monospace,Menlo,monospace;letter-spacing:2px;fill:#55555E}
+    .mono{font:600 13px/1 ui-monospace,Menlo,monospace;letter-spacing:3px;fill:#1A1A20}
+    .rule{stroke:rgba(0,0,0,0.11);stroke-width:1}
+    .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s ease forwards}
+    .rev{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.75,.25,1) forwards}
+    .cdot{animation:cdot 2.2s ease-in-out infinite}
+    .cring{animation:cring 2.2s ease-out infinite}
+    .spin{transform-box:fill-box;transform-origin:center;animation:spin 16s linear infinite}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes rise{to{opacity:1;transform:none}}
+    @keyframes cdot{0%,100%{opacity:1}50%{opacity:.35}}
+    @keyframes cring{0%{r:4px;opacity:.6}100%{r:12px;opacity:0}}
+    @keyframes spin{from{transform:rotate(45deg)}to{transform:rotate(405deg)}}
+    @media(prefers-reduced-motion:reduce){
+      .draw{animation:none;stroke-dashoffset:0}.rev{animation:none;opacity:1;transform:none}
+      .cdot,.cring,.spin{animation:none}.spin{transform:rotate(45deg)}
+    }
+  </style></defs>
+  <text class="idx" x="40" y="46">05</text><line class="rule draw" x1="66" y1="42" x2="120" y2="42" pathLength="1"/><text class="eyebrow" x="134" y="47">CONTACT</text><g class="rev" style="animation-delay:.25s"><circle class="cdot" cx="1225" cy="42" r="4" fill="#43E7C4"/><circle class="cring" cx="1225" cy="42" r="4" fill="none" stroke="#43E7C4" stroke-width="1.3"/><text class="foot" x="1215" y="46" text-anchor="end">AVAILABLE</text></g><text class="lead rev" x="40" y="108" style="animation-delay:.3s">Let&#39;s build something considered.</text><text class="sub rev" x="40" y="134" style="animation-delay:.4s">Open to senior product &amp; UX roles, and select client work.</text><g class="rev" style="animation-delay:0.55s"><rect x="40" y="150" width="150" height="44" rx="12" class="pill"/><circle cx="66" cy="172" r="9" class="ic"/><ellipse cx="66" cy="172" rx="3.6" ry="9" class="ic"/><line x1="57" y1="172" x2="75" y2="172" class="ic"/><text class="plbl" x="88" y="177">Portfolio</text></g><g class="rev" style="animation-delay:0.67s"><rect x="206" y="150" width="120" height="44" rx="12" class="pill"/><circle cx="232" cy="172" r="3.2" class="ic"/><line x1="232.0" y1="168.0" x2="232.0" y2="164.0" class="ic"/><circle cx="232.0" cy="164.0" r="1.5" fill="#6E8BFF"/><line x1="235.8" y1="170.8" x2="239.6" y2="169.5" class="ic"/><circle cx="239.6" cy="169.5" r="1.5" fill="#6E8BFF"/><line x1="234.4" y1="175.2" x2="236.7" y2="178.5" class="ic"/><circle cx="236.7" cy="178.5" r="1.5" fill="#6E8BFF"/><line x1="229.6" y1="175.2" x2="227.3" y2="178.5" class="ic"/><circle cx="227.3" cy="178.5" r="1.5" fill="#6E8BFF"/><line x1="228.2" y1="170.8" x2="224.4" y2="169.5" class="ic"/><circle cx="224.4" cy="169.5" r="1.5" fill="#6E8BFF"/><text class="plbl" x="254" y="177">GitHub</text></g><g class="rev" style="animation-delay:0.79s"><rect x="342" y="150" width="112" height="44" rx="12" class="pill"/><rect x="358" y="165" width="20" height="14" rx="2.5" class="ic"/><path class="ic" d="M358,168 l10,7 10,-7"/><text class="plbl" x="390" y="177">Email</text></g>
+</svg>
