@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="96" viewBox="0 0 1280 96" fill="none" role="img" aria-label="Handcrafted with custom SVG. No templates, no external icons. 2026, Chennai.">
+  <title>Handcrafted with custom SVG. No templates, no external icons. 2026, Chennai.</title>
+  <defs><style>
+    .ic{fill:none;stroke:#1A1A20;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .idx{font:600 13px/1 ui-monospace,Menlo,monospace;letter-spacing:2px;fill:#6E8BFF}
+    .eyebrow{font:500 14px/1 ui-monospace,Menlo,monospace;letter-spacing:5px;fill:#55555E}
+    .lead{font:300 30px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#1A1A20;letter-spacing:-.5px}
+    .sub{font:400 15px/1 ui-sans-serif,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;fill:#55555E}
+    .pill{fill:rgba(0,0,0,0.015);stroke:rgba(0,0,0,0.11);stroke-width:1.2}
+    .plbl{font:500 13px/1 ui-monospace,Menlo,monospace;letter-spacing:1px;fill:#1A1A20}
+    .foot{font:500 12px/1 ui-monospace,Menlo,monospace;letter-spacing:2px;fill:#55555E}
+    .mono{font:600 13px/1 ui-monospace,Menlo,monospace;letter-spacing:3px;fill:#1A1A20}
+    .rule{stroke:rgba(0,0,0,0.11);stroke-width:1}
+    .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1.3s ease forwards}
+    .rev{opacity:0;transform:translateY(10px);animation:rise .7s cubic-bezier(.2,.75,.25,1) forwards}
+    .cdot{animation:cdot 2.2s ease-in-out infinite}
+    .cring{animation:cring 2.2s ease-out infinite}
+    .spin{transform-box:fill-box;transform-origin:center;animation:spin 16s linear infinite}
+    @keyframes draw{to{stroke-dashoffset:0}}
+    @keyframes rise{to{opacity:1;transform:none}}
+    @keyframes cdot{0%,100%{opacity:1}50%{opacity:.35}}
+    @keyframes cring{0%{r:4px;opacity:.6}100%{r:12px;opacity:0}}
+    @keyframes spin{from{transform:rotate(45deg)}to{transform:rotate(405deg)}}
+    @media(prefers-reduced-motion:reduce){
+      .draw{animation:none;stroke-dashoffset:0}.rev{animation:none;opacity:1;transform:none}
+      .cdot,.cring,.spin{animation:none}.spin{transform:rotate(45deg)}
+    }
+  </style></defs>
+  <line class="rule draw" x1="40" y1="30" x2="1240" y2="30" pathLength="1"/><g class="rev" style="animation-delay:.3s" transform="translate(40,64)"><rect class="spin" x="-5" y="-5" width="10" height="10" rx="2" fill="none" stroke="#6E8BFF" stroke-width="1.6"/><text class="mono" x="18" y="4">YASAR K</text></g><text class="foot rev" x="640" y="68" text-anchor="middle" style="animation-delay:.4s">HANDCRAFTED WITH CUSTOM SVG &#160;·&#160; NO TEMPLATES &#160;·&#160; NO EXTERNAL ICONS</text><text class="foot rev" x="1240" y="68" text-anchor="end" style="animation-delay:.5s">© 2026 &#160;·&#160; CHENNAI, IN</text>
+</svg>
