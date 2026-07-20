@@ -68,3 +68,16 @@ GitHub READMEs sanitize Markdown: **no `<script>`, no page `<style>`, no `:hover
 no JS.** Every asset is therefore a self-contained SVG referenced as an image, where
 internal `<style>`, `@keyframes`, SMIL, filters and gradients all animate. Theme
 switching is done with `<picture>` + `prefers-color-scheme`, not CSS toggles.
+
+## Accessibility (Sprint 4 audit)
+
+Every asset passes an automated audit:
+- `role="img"`, `aria-label`, and `<title>` on all 28 SVGs (screen-reader name + tooltip).
+- **All motion is CSS** — there are zero infinite SMIL loops. This matters because
+  `@media (prefers-reduced-motion: reduce)` cannot stop SMIL animation; it can only
+  gate CSS. Every animated file therefore honors reduced-motion, collapsing to a calm
+  resting state (no orbit, pulse, drift, sweep, or blink) for users who ask for it.
+- README `<img>`/`<picture>` all carry descriptive `alt` text; decorative dividers use
+  empty `alt=""` so screen readers skip them.
+- Clickable contact links live in the README markdown (an SVG embedded as an image
+  cannot expose working hyperlinks on GitHub).
