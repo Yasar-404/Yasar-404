@@ -13,10 +13,10 @@
 
 &nbsp;
 
-I design products with intention and build them with code. By combining product thinking, UX design, 
-and frontend engineering, I create digital experiences that are intuitive, scalable, accessible, 
-and built for real users. I enjoy turning complex ideas into polished interfaces 
-that not only look great but also perform reliably in production.
+I design products with intention and build them with code. By combining product thinking, 
+UX design, and frontend engineering, I create digital experiences that are intuitive, 
+scalable, accessible, and built for real users. I enjoy turning complex ideas into polished
+interfaces that not only look great but also perform reliably in production.
 
 &nbsp;
 
@@ -47,6 +47,26 @@ that not only look great but also perform reliably in production.
   <img alt="Current focus — building intelligent business software; custom web applications; design systems and digital products." src="./assets/focus-dark.svg" width="100%">
 </picture>
 
-<!-- ─────────────────────────────────────────────────────────────
-  SPRINT 4 → Contact · Footer · full dark/light pass · a11y + reduced-motion audit
-────────────────────────────────────────────────────────────── -->
+<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
+<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/contact-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/contact-light.svg">
+  <img alt="Contact — portfolio, GitHub, email; available for senior product and UX roles" src="./assets/contact-dark.svg" width="100%">
+</picture>
+
+<p align="center">
+  <a href="https://yasardesigns.framer.website">Portfolio</a>
+  &nbsp;·&nbsp;
+  <a href="https://github.com/Yasar-404">GitHub</a>
+  <!-- Add your real links when ready:
+  &nbsp;·&nbsp; <a href="mailto:you@example.com">Email</a>
+  &nbsp;·&nbsp; <a href="https://www.linkedin.com/in/your-handle">LinkedIn</a> -->
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/footer-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/footer-light.svg">
+  <img alt="Handcrafted with custom SVG. No templates, no external icons. 2026, Chennai." src="./assets/footer-dark.svg" width="100%">
+</picture>
