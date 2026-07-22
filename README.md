@@ -20,8 +20,11 @@ management platform, and a production fitness site down to its own particle hero
 
 &nbsp;
 
-<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
-<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.svg">
+  <img alt="" src="./assets/divider-dark.svg" width="100%">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/stack-dark.svg">
@@ -29,8 +32,11 @@ management platform, and a production fitness site down to its own particle hero
   <img alt="Stack — Engineering: React, Next.js, TypeScript, JavaScript, Node.js, Prisma, PostgreSQL, Tailwind. Design & tools: Figma, Framer, Motion, Git, GitHub, Terminal" src="./assets/stack-dark.svg" width="100%">
 </picture>
 
-<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
-<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.svg">
+  <img alt="" src="./assets/divider-dark.svg" width="100%">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/philosophy-dark.svg">
@@ -38,8 +44,11 @@ management platform, and a production fitness site down to its own particle hero
   <img alt="Engineering philosophy — Design in code; details are the interface; accessible and fast by default." src="./assets/philosophy-dark.svg" width="100%">
 </picture>
 
-<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
-<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.svg">
+  <img alt="" src="./assets/divider-dark.svg" width="100%">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/focus-dark.svg">
@@ -47,8 +56,11 @@ management platform, and a production fitness site down to its own particle hero
   <img alt="Current focus — building intelligent business software; custom web applications; design systems and digital products." src="./assets/focus-dark.svg" width="100%">
 </picture>
 
-<img alt="" src="./assets/divider-dark.svg#gh-dark-mode-only" width="100%">
-<img alt="" src="./assets/divider-light.svg#gh-light-mode-only" width="100%">
+<picture>
+  <source media="(prefers-color-scheme: dark)"  srcset="./assets/divider-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/divider-light.svg">
+  <img alt="" src="./assets/divider-dark.svg" width="100%">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/contact-dark.svg">
@@ -58,19 +70,28 @@ management platform, and a production fitness site down to its own particle hero
 
 <p>
   <a href="https://yasardesigns.framer.website">
-    <img src="./assets/btn-portfolio-dark.svg#gh-dark-mode-only" alt="Portfolio" height="46">
-    <img src="./assets/btn-portfolio-light.svg#gh-light-mode-only" alt="Portfolio" height="46">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="./assets/btn-portfolio-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/btn-portfolio-light.svg">
+      <img src="./assets/btn-portfolio-dark.svg" alt="Portfolio" height="46">
+    </picture>
   </a>
   &nbsp;
   <a href="https://github.com/Yasar-404">
-    <img src="./assets/btn-github-dark.svg#gh-dark-mode-only" alt="GitHub" height="46">
-    <img src="./assets/btn-github-light.svg#gh-light-mode-only" alt="GitHub" height="46">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="./assets/btn-github-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/btn-github-light.svg">
+      <img src="./assets/btn-github-dark.svg" alt="GitHub" height="46">
+    </picture>
   </a>
   <!-- Email button — replace the address below with yours, then uncomment:
   &nbsp;
   <a href="mailto:you@example.com">
-    <img src="./assets/btn-email-dark.svg#gh-dark-mode-only" alt="Email" height="46">
-    <img src="./assets/btn-email-light.svg#gh-light-mode-only" alt="Email" height="46">
+    <picture>
+      <source media="(prefers-color-scheme: dark)"  srcset="./assets/btn-email-dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/btn-email-light.svg">
+      <img src="./assets/btn-email-dark.svg" alt="Email" height="46">
+    </picture>
   </a>
   -->
 </p>
