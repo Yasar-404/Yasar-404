@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="118" height="52" viewBox="0 0 118 52" fill="none" role="img" aria-label="Email">
+  <title>Email</title>
+  <defs><style>
+    .pill{fill:rgba(0,0,0,0.02);stroke:rgba(0,0,0,0.12);stroke-width:1.3}
+    .bic{fill:none;stroke:#1A1A20;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+    .blbl{font:500 13px/1 ui-monospace,Menlo,monospace;letter-spacing:1px;fill:#1A1A20}
+  </style></defs>
+  <rect x="1.5" y="4" width="115" height="44" rx="13" class="pill"/>
+  <rect x="19" y="19.5" width="18" height="13" rx="2.5" class="bic"/><path class="bic" d="M19,22.5 l9,6.5 9,-6.5"/>
+  <text class="blbl" x="52" y="31">Email</text>
+</svg>
