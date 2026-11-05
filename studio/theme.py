@@ -25,8 +25,6 @@ class Theme:
     type: str
     number: str
     comment: str
-    # Heatmap ramp, empty to busiest.
-    heat: tuple[str, str, str, str, str]
 
 
 DARK = Theme(
@@ -47,7 +45,6 @@ DARK = Theme(
     type="#E9C07B",
     number="#F0957F",
     comment="#70707C",
-    heat=("#17171C", "#25305C", "#3A4F9E", "#5C78E6", "#9DB0FF"),
 )
 
 LIGHT = Theme(
@@ -68,7 +65,6 @@ LIGHT = Theme(
     type="#A5650C",
     number="#C24A32",
     comment="#85858F",
-    heat=("#ECECF1", "#C5CFF8", "#94A6F2", "#5F78E8", "#3346B8"),
 )
 
 THEMES = (DARK, LIGHT)

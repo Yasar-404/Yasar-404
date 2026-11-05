@@ -4,13 +4,12 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from ..analytics import Metrics
 from ..content import PROJECTS
 from ..theme import THEMES
-from . import activity, architecture, chrome, code, hero, projects, stack
+from . import architecture, chrome, code, hero, projects, stack
 
 
-def render_all(metrics: Metrics, out_dir: Path) -> int:
+def render_all(out_dir: Path) -> int:
     """Write the dark and light variant of every asset and return the file count."""
     written = 0
     for theme in THEMES:
@@ -19,7 +18,6 @@ def render_all(metrics: Metrics, out_dir: Path) -> int:
             "architecture": architecture.render(theme),
             "code": code.render(theme),
             "stack": stack.render(theme),
-            "activity": activity.render(theme, metrics),
             "divider": chrome.divider(theme),
             "contact": chrome.contact(theme),
             "footer": chrome.footer(theme),

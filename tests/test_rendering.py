@@ -5,31 +5,18 @@ from pathlib import Path
 
 import pytest
 
-from studio.analytics import Metrics
 from studio.content import SNIPPETS
 from studio.sections import render_all
-from studio.sections.activity import heat_level
 from studio.sections.code import tokenize
 
 ROOT = Path(__file__).resolve().parent.parent
 SVG = "{http://www.w3.org/2000/svg}"
 
-METRICS = Metrics(
-    commits=3,
-    active_days=2,
-    repositories=1,
-    first_commit="2026-01-01",
-    last_commit="2026-01-03",
-    longest_streak=1,
-    daily={"2026-01-01": 2, "2026-01-03": 1},
-    languages=[("Python", 0.75), ("SQL", 0.25)],
-)
-
 
 @pytest.fixture(scope="module")
 def rendered(tmp_path_factory):
     out = tmp_path_factory.mktemp("assets")
-    render_all(METRICS, out)
+    render_all(out)
     return {path.name: path.read_text(encoding="utf-8") for path in out.glob("*.svg")}
 
 
@@ -77,11 +64,6 @@ def test_readme_only_references_assets_that_exist():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     for reference in set(re.findall(r"\./assets/[\w-]+\.svg", readme)):
         assert (ROOT / reference).is_file(), reference
-
-
-@pytest.mark.parametrize(("commits", "level"), [(0, 0), (1, 1), (2, 2), (3, 3), (4, 3), (5, 4)])
-def test_heat_levels(commits, level):
-    assert heat_level(commits) == level
 
 
 def test_tokenizer_classifies_tokens():

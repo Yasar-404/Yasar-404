@@ -4,8 +4,6 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-GITHUB_USER = "Yasar-404"
-
 WORDMARK = "YASAR K"
 HEADLINE = "FULL-STACK ENGINEER  ·  PRODUCT DESIGNER  ·  CHENNAI, IN"
 TAGLINE = "From the first pixel to the last query."
@@ -15,13 +13,13 @@ LAYERS = (
     ("DESIGN", "Figma, Framer, design systems"),
     ("FRONTEND", "React, Next.js, TypeScript"),
     ("BACKEND", "Python, Java, Node.js, Go"),
-    ("DATA", "SQL, PostgreSQL, SQLite"),
+    ("DATA", "SQL, PostgreSQL, data modelling"),
 )
 
 STACK = (
     ("FRONTEND", ("React", "Next.js", "TypeScript", "JavaScript", "Tailwind", "Motion")),
     ("BACKEND", ("Python", "Java", "Node.js", "Go", "REST APIs", "Prisma")),
-    ("DATA & DELIVERY", ("SQL", "PostgreSQL", "SQLite", "Git", "GitHub Actions", "Vercel")),
+    ("DATA & DELIVERY", ("SQL", "PostgreSQL", "Git", "GitHub Actions", "Vercel", "Netlify")),
     (
         "PRODUCT DESIGN",
         ("Figma", "Framer", "Webflow", "Illustrator", "Photoshop", "Design Systems"),

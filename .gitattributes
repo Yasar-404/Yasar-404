@@ -1,3 +1,2 @@
 assets/*.svg linguist-generated=true
 fonts/** linguist-vendored=true
-data/snapshot.json linguist-generated=true

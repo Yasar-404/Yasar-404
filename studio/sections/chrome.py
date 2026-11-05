@@ -8,7 +8,6 @@ from ..typography import face
 
 BUTTONS = (
     ("portfolio", "Portfolio"),
-    ("linkedin", "LinkedIn"),
     ("email", "Email"),
     ("github", "GitHub"),
     ("behance", "Behance"),
@@ -40,7 +39,7 @@ def contact(theme: Theme) -> str:
         ".dotp{animation:none}",
     )
     doc.add(
-        doc.section_header("06", "CONTACT"),
+        doc.section_header("05", "CONTACT"),
         f'<circle class="dotp" cx="{WIDTH - MARGIN - 4}" cy="40" r="4" fill="{t.mint}"/>',
         doc.label_text(WIDTH - MARGIN - 18, 44, "AVAILABLE", "muted", "end", 11, 1.8),
         doc.text(
@@ -67,7 +66,7 @@ def footer(theme: Theme) -> str:
         f'<path d="M{MARGIN + 6} 30 l6 6 -6 6 -6 -6 Z" fill="{t.accent}"/>',
         doc.label_text(MARGIN + 22, 41, "YASAR K", "ink", size=11.5, track=2.4),
         doc.label_text(
-            WIDTH / 2, 41, "RENDERED IN PYTHON  ·  QUERIED IN SQL", "faint", "middle", 10.5, 1.6
+            WIDTH / 2, 41, "RENDERED IN PYTHON  ·  TESTED IN CI", "faint", "middle", 10.5, 1.6
         ),
         doc.label_text(WIDTH - MARGIN, 41, "CHENNAI, IN", "faint", "end", 10.5, 1.6),
     )
@@ -80,8 +79,6 @@ def _button_icon(name: str, t: Theme) -> str:
     )
     return {
         "portfolio": f'<circle r="7" {stroke}/><path {stroke} d="M-7 0 H7 M0 -7 q4 7 0 14 q-4 -7 0 -14"/>',
-        "linkedin": f'<rect x="-7" y="-7" width="14" height="14" rx="3" {stroke}/>'
-        f'<path {stroke} d="M-3.5 -1 V4 M-.5 4 V-1 M-.5 1 q0 -2 2 -2 q2 0 2 2 V4 M-3.5 -3.6 V-3.4"/>',
         "email": f'<rect x="-8" y="-6" width="16" height="12" rx="2.5" {stroke}/>'
         f'<path {stroke} d="M-7 -4 L0 1 7 -4"/>',
         "github": f'<circle cx="-4" cy="-5" r="2" {stroke}/><circle cx="-4" cy="6" r="2" {stroke}/>'

@@ -65,8 +65,8 @@ def icon(doc: Doc, name: str) -> str:
         "PostgreSQL": '<ellipse cy="-8" rx="11" ry="4" class="ic"/>'
         '<path class="ic" d="M-11 -8 V8 q0 4 11 4 11 0 11 -4 V-8"/>'
         '<path class="ica" d="M-11 0 q0 4 11 4 11 0 11 -4"/>',
-        "SQLite": '<path class="ic" d="M-10 -12 H5 L10 -7 V12 H-10 Z M5 -12 V-7 H10"/>'
-        '<path class="ica" d="M-5 -1 H5 M-5 3.5 H5 M-5 8 H5"/>',
+        "Netlify": '<polygon points="0,-13 13,0 0,13 -13,0" class="ic"/>'
+        '<path class="ica" d="M-5 0 H5 M0 -5 V5"/>',
         "Git": '<path class="ic" d="M-6 12 V-12"/><path class="ica" d="M-6 6 q0 -6 6 -6 h1"/>'
         '<circle cx="-6" cy="12" r="2.5" class="iconfill"/>'
         '<circle cx="-6" cy="-12" r="2.5" class="iconfill"/>'
