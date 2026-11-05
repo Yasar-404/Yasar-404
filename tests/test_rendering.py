@@ -1,0 +1,100 @@
+import ast
+import re
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+import pytest
+
+from studio.analytics import Metrics
+from studio.content import SNIPPETS
+from studio.sections import render_all
+from studio.sections.activity import heat_level
+from studio.sections.code import tokenize
+
+ROOT = Path(__file__).resolve().parent.parent
+SVG = "{http://www.w3.org/2000/svg}"
+
+METRICS = Metrics(
+    commits=3,
+    active_days=2,
+    repositories=1,
+    first_commit="2026-01-01",
+    last_commit="2026-01-03",
+    longest_streak=1,
+    daily={"2026-01-01": 2, "2026-01-03": 1},
+    languages=[("Python", 0.75), ("SQL", 0.25)],
+)
+
+
+@pytest.fixture(scope="module")
+def rendered(tmp_path_factory):
+    out = tmp_path_factory.mktemp("assets")
+    render_all(METRICS, out)
+    return {path.name: path.read_text(encoding="utf-8") for path in out.glob("*.svg")}
+
+
+def test_every_asset_ships_in_both_themes(rendered):
+    stems = {name.rsplit("-", 1)[0] for name in rendered}
+    assert len(rendered) == 2 * len(stems)
+    for stem in stems:
+        assert f"{stem}-dark.svg" in rendered
+        assert f"{stem}-light.svg" in rendered
+
+
+def test_assets_are_well_formed_and_labelled(rendered):
+    for name, svg in rendered.items():
+        root = ET.fromstring(svg)
+        assert root.tag == f"{SVG}svg", name
+        assert root.get("role") == "img", name
+        assert root.get("aria-label"), name
+        assert root.find(f"{SVG}title") is not None, name
+
+
+def test_assets_are_self_contained(rendered):
+    """GitHub's image sandbox blocks scripts and any external resource."""
+    for name, svg in rendered.items():
+        assert "<script" not in svg, name
+        assert "@import" not in svg, name
+        external = re.findall(r'(?:href|src)="(?!#)([^"]+)"', svg)
+        assert not external, (name, external)
+
+
+def test_every_glyph_reference_resolves(rendered):
+    for name, svg in rendered.items():
+        ids = set(re.findall(r'\bid="([^"]+)"', svg))
+        refs = set(re.findall(r'href="#([^"]+)"', svg))
+        assert refs <= ids, name
+
+
+def test_motion_is_css_and_honours_reduced_motion(rendered):
+    for name, svg in rendered.items():
+        assert "<animate" not in svg, name
+        if "infinite" in svg:
+            assert "prefers-reduced-motion" in svg, name
+
+
+def test_readme_only_references_assets_that_exist():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    for reference in set(re.findall(r"\./assets/[\w-]+\.svg", readme)):
+        assert (ROOT / reference).is_file(), reference
+
+
+@pytest.mark.parametrize(("commits", "level"), [(0, 0), (1, 1), (2, 2), (3, 3), (4, 3), (5, 4)])
+def test_heat_levels(commits, level):
+    assert heat_level(commits) == level
+
+
+def test_tokenizer_classifies_tokens():
+    kinds = {
+        text: kind for _, text, kind in tokenize('return fetch("/x", 14); // done', "typescript")
+    }
+    assert kinds["return"] == "keyword"
+    assert kinds["fetch"] == "call"
+    assert kinds['"/x"'] == "string"
+    assert kinds["14"] == "number"
+    assert kinds["// done"] == "comment"
+
+
+def test_python_snippet_parses():
+    source = next(code for _, language, code in SNIPPETS if language == "python")
+    ast.parse(source)

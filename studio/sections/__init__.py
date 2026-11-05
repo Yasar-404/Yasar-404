@@ -1,0 +1,35 @@
+"""Renderers for every asset on the profile. Each returns a finished SVG string."""
+
+from __future__ import annotations
+
+from pathlib import Path
+
+from ..analytics import Metrics
+from ..content import PROJECTS
+from ..theme import THEMES
+from . import activity, architecture, chrome, code, hero, projects, stack
+
+
+def render_all(metrics: Metrics, out_dir: Path) -> int:
+    """Write the dark and light variant of every asset and return the file count."""
+    written = 0
+    for theme in THEMES:
+        assets = {
+            "hero": hero.render(theme),
+            "architecture": architecture.render(theme),
+            "code": code.render(theme),
+            "stack": stack.render(theme),
+            "activity": activity.render(theme, metrics),
+            "divider": chrome.divider(theme),
+            "contact": chrome.contact(theme),
+            "footer": chrome.footer(theme),
+            "work-heading": chrome.heading(theme, "04", "SELECTED WORK", "CLICK A CARD TO OPEN IT"),
+        }
+        for project in PROJECTS:
+            assets[f"project-{project.slug}"] = projects.render(theme, project)
+        for name, label in chrome.BUTTONS:
+            assets[f"btn-{name}"] = chrome.button(theme, name, label)
+        for name, svg in assets.items():
+            (out_dir / f"{name}-{theme.name}.svg").write_text(svg, encoding="utf-8")
+            written += 1
+    return written
