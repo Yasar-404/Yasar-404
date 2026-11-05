@@ -7,6 +7,7 @@ import pytest
 
 from studio.content import CLIENTS, SNIPPETS
 from studio.sections import render_all
+from studio.sections.chrome import BUTTONS, button_canvas_width
 from studio.sections.code import tokenize
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -94,3 +95,13 @@ def test_readme_links_every_client_in_tight_rows():
     # Whitespace between two 50% images would push the second one onto a new line.
     assert re.search(r'client-cassinil-dark\.svg" width="50%"></picture></a><a ', readme)
     assert re.search(r'client-rune-dark\.svg" width="50%"></picture></a><a ', readme)
+
+
+def test_readme_buttons_stay_on_the_page_grid():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    assert "</picture></a><a " in readme
+    for i, (name, label) in enumerate(BUTTONS):
+        expected = button_canvas_width(label, i == 0) / 9.6
+        match = re.search(rf'btn-{name}-dark\.svg" alt="[^"]*" width="([\d.]+)%"', readme)
+        assert match, name
+        assert float(match.group(1)) == pytest.approx(expected, abs=0.01), name

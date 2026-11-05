@@ -6,6 +6,8 @@ from ..svg import EASE, MARGIN, WIDTH, Doc
 from ..theme import Theme
 from ..typography import face
 
+BUTTON_H, BUTTON_GAP = 50, 10
+
 BUTTONS = (
     ("portfolio", "Portfolio"),
     ("email", "Email"),
@@ -33,7 +35,7 @@ def divider(theme: Theme) -> str:
 
 def contact(theme: Theme) -> str:
     t = theme
-    doc = Doc(t, "Contact: open to full-stack and software engineering roles", 140)
+    doc = Doc(t, "Contact: open to full-stack and software engineering roles", 150)
     doc.add(
         doc.section_header("06", "CONTACT"),
         f'<circle cx="{WIDTH - MARGIN - 4}" cy="40" r="4" fill="{t.mint}"/>',
@@ -84,14 +86,23 @@ def _button_icon(name: str, t: Theme) -> str:
     }[name]
 
 
-def button(theme: Theme, name: str, label: str) -> str:
+def button_canvas_width(label: str, first: bool) -> int:
+    """Width of a button's image: the pill, its right gap and, for the first, the page margin."""
+    pill = round(46 + face("mono", 500).width(label, 14) + 22)
+    return pill + BUTTON_GAP + (MARGIN if first else 0)
+
+
+def button(theme: Theme, name: str, label: str, first: bool) -> str:
+    """Render one button on the page grid, so the README can size it as a share of the column."""
     t = theme
-    width = round(44 + face("mono", 500).width(label, 13) + 20)
-    doc = Doc(t, label, 46, width)
+    left = MARGIN if first else 0
+    width = button_canvas_width(label, first)
+    doc = Doc(t, label, BUTTON_H, width)
     doc.add(
-        f'<rect class="card" x=".5" y=".5" width="{width - 1}" height="45" rx="12"/>',
-        f'<g transform="translate(24 23)">{_button_icon(name, t)}</g>',
-        doc.text(44, 28, label, "mono", 500, 13, "ink"),
+        f'<rect class="card" x="{left + 0.5}" y=".5" width="{width - left - BUTTON_GAP - 1}" '
+        f'height="{BUTTON_H - 1}" rx="12"/>',
+        f'<g transform="translate({left + 24} {BUTTON_H / 2})">{_button_icon(name, t)}</g>',
+        doc.text(left + 46, BUTTON_H / 2 + 5, label, "mono", 500, 14, "ink"),
     )
     return doc.render()
 
