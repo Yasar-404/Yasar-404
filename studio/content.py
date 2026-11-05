@@ -79,6 +79,57 @@ PROJECTS = (
     ),
 )
 
+
+@dataclass(frozen=True)
+class Client:
+    slug: str
+    name: str
+    industry: str
+    summary: str
+    tools: str
+    motif: str
+    url: str
+
+
+CLIENTS = (
+    Client(
+        "cassinil",
+        "Cassinil Engineers",
+        "CONSTRUCTION & BUILDING APPROVALS",
+        "Modern digital brand experience",
+        "FIGMA  ·  FRAMER",
+        "blueprint",
+        "https://cassinil.in",
+    ),
+    Client(
+        "v4",
+        "V4 Fitness Hub",
+        "FITNESS & REHABILITATION",
+        "Responsive, SEO-focused gym website",
+        "FIGMA  ·  HTML  ·  CSS  ·  JS",
+        "pulse",
+        "https://v4-fitness-hub.vercel.app",
+    ),
+    Client(
+        "rune",
+        "Rune Designs",
+        "ARCHITECTURE & INTERIORS",
+        "Minimal, gallery-style studio website",
+        "FIGMA  ·  FRAMER",
+        "gallery",
+        "https://runedesigns.framer.website",
+    ),
+    Client(
+        "aorganic",
+        "A Organic Beauty Salon",
+        "BEAUTY & SALON SERVICES",
+        "Calm, nature-inspired wellness website",
+        "FIGMA  ·  FRAMER",
+        "bloom",
+        "https://aorganicbeautysalon.framer.website",
+    ),
+)
+
 # Reference snippets for the code panel: one renewals feature, across the stack.
 SNIPPETS = (
     (

@@ -63,7 +63,13 @@ I'm a full-stack engineer who started in product design, so I care about both en
   </picture>
 </a>
 
-**Design and web work for clients:** [Cassinil Engineers](https://cassinil.in) · [V4 Fitness Hub](https://v4-fitness-hub.vercel.app) · [Rune Designs](https://runedesigns.framer.website) · [A Organic Beauty Salon](https://aorganicbeautysalon.framer.website) · [Case studies on Behance](https://www.behance.net/yasardesigns)
+<picture><source media="(prefers-color-scheme: dark)" srcset="./assets/clients-heading-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/clients-heading-light.svg"><img alt="Client work" src="./assets/clients-heading-dark.svg" width="100%"></picture>
+
+<p>
+<a href="https://cassinil.in"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/client-cassinil-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/client-cassinil-light.svg"><img alt="Cassinil Engineers, construction and building approvals: brand website." src="./assets/client-cassinil-dark.svg" width="50%"></picture></a><a href="https://v4-fitness-hub.vercel.app"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/client-v4-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/client-v4-light.svg"><img alt="V4 Fitness Hub, fitness and rehabilitation: responsive gym website." src="./assets/client-v4-dark.svg" width="50%"></picture></a>
+<a href="https://runedesigns.framer.website"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/client-rune-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/client-rune-light.svg"><img alt="Rune Designs, architecture and interiors: gallery-style studio website." src="./assets/client-rune-dark.svg" width="50%"></picture></a><a href="https://aorganicbeautysalon.framer.website"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/client-aorganic-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/client-aorganic-light.svg"><img alt="A Organic Beauty Salon: nature-inspired wellness website." src="./assets/client-aorganic-dark.svg" width="50%"></picture></a>
+<a href="https://www.behance.net/yasardesigns"><picture><source media="(prefers-color-scheme: dark)" srcset="./assets/client-case-studies-dark.svg"><source media="(prefers-color-scheme: light)" srcset="./assets/client-case-studies-light.svg"><img alt="Read the full case studies on Behance" src="./assets/client-case-studies-dark.svg" width="100%"></picture></a>
+</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/contact-dark.svg">

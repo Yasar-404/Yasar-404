@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from ..content import PROJECTS
+from ..content import CLIENTS, PROJECTS
 from ..theme import THEMES
-from . import architecture, chrome, code, hero, projects, stack
+from . import architecture, chrome, clients, code, hero, projects, stack
 
 
 def render_all(out_dir: Path) -> int:
@@ -23,6 +23,10 @@ def render_all(out_dir: Path) -> int:
             "footer": chrome.footer(theme),
             "work-heading": chrome.heading(theme, "04", "SELECTED WORK", "CLICK A CARD TO OPEN IT"),
         }
+        assets["clients-heading"] = chrome.heading(theme, "05", "CLIENT WORK", "DESIGN & WEB")
+        assets["client-case-studies"] = clients.case_studies(theme)
+        for i, client in enumerate(CLIENTS):
+            assets[f"client-{client.slug}"] = clients.card(theme, client, i % 2 == 0)
         for project in PROJECTS:
             assets[f"project-{project.slug}"] = projects.render(theme, project)
         for name, label in chrome.BUTTONS:

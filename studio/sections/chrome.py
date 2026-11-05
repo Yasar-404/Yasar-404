@@ -39,7 +39,7 @@ def contact(theme: Theme) -> str:
         ".dotp{animation:none}",
     )
     doc.add(
-        doc.section_header("05", "CONTACT"),
+        doc.section_header("06", "CONTACT"),
         f'<circle class="dotp" cx="{WIDTH - MARGIN - 4}" cy="40" r="4" fill="{t.mint}"/>',
         doc.label_text(WIDTH - MARGIN - 18, 44, "AVAILABLE", "muted", "end", 11, 1.8),
         doc.text(

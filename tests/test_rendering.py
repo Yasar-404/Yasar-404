@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pytest
 
-from studio.content import SNIPPETS
+from studio.content import CLIENTS, SNIPPETS
 from studio.sections import render_all
 from studio.sections.code import tokenize
 
@@ -80,3 +80,12 @@ def test_tokenizer_classifies_tokens():
 def test_python_snippet_parses():
     source = next(code for _, language, code in SNIPPETS if language == "python")
     ast.parse(source)
+
+
+def test_readme_links_every_client_in_tight_rows():
+    readme = (ROOT / "README.md").read_text(encoding="utf-8")
+    for client in CLIENTS:
+        assert f'<a href="{client.url}">' in readme, client.slug
+    # Whitespace between two 50% images would push the second one onto a new line.
+    assert re.search(r'client-cassinil-dark\.svg" width="50%"></picture></a><a ', readme)
+    assert re.search(r'client-rune-dark\.svg" width="50%"></picture></a><a ', readme)
