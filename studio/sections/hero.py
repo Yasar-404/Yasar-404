@@ -89,8 +89,6 @@ def render(theme: Theme) -> str:
         f".sheen{{animation:sheen 7s {EASE} 3s infinite;transform:translateX(-300px)}}"
         f"@keyframes sheen{{0%{{transform:translateX(-300px)}}"
         f"45%,100%{{transform:translateX({WIDTH + 100}px)}}}}"
-        ".halo{animation:drift 18s ease-in-out infinite}"
-        "@keyframes drift{50%{transform:translate(30px,-16px)}}"
         ".rise{opacity:0;animation:rise .9s ease 1.3s forwards}"
         "@keyframes rise{to{opacity:1}}"
         f".thread{{stroke-dasharray:{inner};stroke-dashoffset:{inner};"
@@ -106,15 +104,10 @@ def render(theme: Theme) -> str:
         f".lay{{fill:{t.panel};stroke:{t.faint};stroke-width:1}}"
         f".lit{{fill:{t.accent};fill-opacity:.28;stroke:{t.mint};stroke-width:1.4;"
         f"opacity:0;animation:lit {CYCLE}s linear infinite}}"
-        "@keyframes lit{0%{opacity:0}2.5%,22%{opacity:1}24.5%,100%{opacity:0}}"
-        ".dotp{animation:dotp 2.2s ease-in-out infinite}"
-        "@keyframes dotp{50%{opacity:.35}}"
-        ".ring{transform-box:fill-box;transform-origin:center;"
-        "animation:ring 2.2s ease-out infinite}"
-        "@keyframes ring{0%{transform:scale(1);opacity:.6}100%{transform:scale(3);opacity:0}}",
+        "@keyframes lit{0%{opacity:0}2.5%,22%{opacity:1}24.5%,100%{opacity:0}}",
         ".wm{animation:none;fill-opacity:1;stroke-opacity:0}"
-        ".sheen,.halo,.dotp,.ring,.pulse,.lit{animation:none}"
-        ".ring,.pulse{opacity:0}"
+        ".sheen,.pulse,.lit{animation:none}"
+        ".pulse{opacity:0}"
         ".rise{animation:none;opacity:1}"
         ".thread{animation:none;stroke-dashoffset:0}"
         ".ph{animation:none}.ph0{opacity:1}"
@@ -125,8 +118,7 @@ def render(theme: Theme) -> str:
     doc.add(
         '<g clip-path="url(#frame)">',
         f'<rect width="{WIDTH}" height="{HEIGHT}" fill="{t.bg}"/>',
-        f'<g class="halo"><rect x="-60" y="-60" width="{WIDTH + 120}" height="{HEIGHT + 120}" '
-        f'fill="url(#halo)"/></g>',
+        f'<rect x="-60" y="-60" width="{WIDTH + 120}" height="{HEIGHT + 120}" fill="url(#halo)"/>',
         f'<rect width="{WIDTH}" height="{HEIGHT}" fill="url(#dots)"/>',
         "</g>",
         f'<rect x=".5" y=".5" width="{WIDTH - 1}" height="{HEIGHT - 1}" rx="16" '
@@ -144,8 +136,7 @@ def render(theme: Theme) -> str:
         doc.text(MARGIN, 272, TAGLINE, "sans", 300, 27, "ink", track=-0.2),
         _layer_stack(doc),
         _layer_copy(doc),
-        f'<circle class="ring" cx="{MARGIN + 4}" cy="370" r="4" stroke="{t.mint}"/>',
-        f'<circle class="dotp" cx="{MARGIN + 4}" cy="370" r="4" fill="{t.mint}"/>',
+        f'<circle cx="{MARGIN + 4}" cy="370" r="4" fill="{t.mint}"/>',
         doc.label_text(MARGIN + 22, 374, STATUS, "muted", size=11.5, track=1.8),
         "</g>",
     )

@@ -90,12 +90,12 @@ def render(theme: Theme) -> str:
         f".cplain{{fill:{t.ink}}}.ckeyword{{fill:{t.keyword}}}.cstring{{fill:{t.string}}}"
         f".ctype{{fill:{t.type}}}.cnumber{{fill:{t.number}}}.ccomment{{fill:{t.comment}}}"
         f".cannotation{{fill:{t.type}}}.ccall{{fill:{t.mint}}}"
-        f".pane,.tabon{{opacity:0;animation:pane {loop}s linear infinite}}"
-        f"@keyframes pane{{0%{{opacity:0}}.8%,{slice_pct - 1:.2f}%{{opacity:1}}"
-        f"{slice_pct:.2f}%,100%{{opacity:0}}}}"
+        f".pane,.tabon{{opacity:0;visibility:hidden;animation:pane {loop}s linear infinite}}"
+        f"@keyframes pane{{0%{{opacity:0;visibility:visible}}.8%,{slice_pct - 1:.2f}%{{opacity:1;visibility:visible}}"
+        f"{slice_pct:.2f}%{{opacity:0;visibility:visible}}{slice_pct + 0.01:.2f}%,100%{{opacity:0;visibility:hidden}}}}"
         f".cov,.caret{{animation-duration:{loop}s;"
         "animation-iteration-count:infinite;animation-timing-function:linear}",
-        ".pane,.tabon{animation:none;opacity:0}.p0{opacity:1}.cov,.caret{display:none}",
+        ".pane,.tabon{animation:none;opacity:0}.p0{opacity:1;visibility:visible}.cov,.caret{display:none}",
     )
 
     doc.add(

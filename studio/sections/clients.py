@@ -18,16 +18,11 @@ LOOP = 8
 
 
 def _arrow(doc: Doc, x: float, y: float) -> str:
-    """A small arrow that nudges forward, signalling that the card is a link."""
-    doc.style(
-        ".nudge{animation:nudge 2.4s ease-in-out infinite}"
-        "@keyframes nudge{50%{transform:translateX(4px)}}",
-        ".nudge{animation:none}",
-    )
+    """A small arrow signalling that the card is a link."""
     stroke = f'stroke="{doc.theme.accent}" stroke-width="1.6" stroke-linecap="round"'
     return (
-        f'<g transform="translate({x} {y})"><g class="nudge">'
-        f'<path d="M0 0 H12 M7 -5 L12 0 7 5" {stroke} stroke-linejoin="round"/></g></g>'
+        f'<g transform="translate({x} {y})">'
+        f'<path d="M0 0 H12 M7 -5 L12 0 7 5" {stroke} stroke-linejoin="round"/></g>'
     )
 
 

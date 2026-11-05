@@ -31,7 +31,7 @@ def icon(doc: Doc, name: str) -> str:
         "React": '<ellipse rx="13" ry="5" class="ic" transform="rotate(-30)"/>'
         '<ellipse rx="13" ry="5" class="ic" transform="rotate(30)"/>'
         '<circle r="2.4" class="iconfill"/>'
-        '<g class="spin"><circle cx="13" r="2" class="mintf"/></g>',
+        '<circle cx="13" r="2" class="mintf"/>',
         "Next.js": '<circle r="12" class="ic"/>'
         '<path class="ic" d="M-5 6 V-6 L6 8"/><path class="ica" d="M5 -6 V2"/>',
         "TypeScript": '<rect x="-12" y="-12" width="24" height="24" rx="5" class="ic"/>'
@@ -43,15 +43,15 @@ def icon(doc: Doc, name: str) -> str:
         "Tailwind": '<path class="ic" d="M-13 -2 q4 -7 9 -4 t8 1 q4 0 8 -4 -3 8 -8 6 t-8 -2 q-5 -1 -9 3 Z"/>'
         '<path class="ica" d="M-13 7 q4 -7 9 -4 t8 1 q4 0 8 -4 -3 8 -8 6 t-8 -2 q-5 -1 -9 3 Z"/>',
         "Motion": '<path class="ic" d="M-13 9 C-4 9 -4 -9 13 -9"/>'
-        '<circle class="glide" r="3" fill="currentColor"/>',
+        '<circle cx="13" cy="-9" r="3" class="mintf"/>',
         "Python": '<path class="ic" d="M0 0 H-8 q-4 0 -4 -4 v-3 q0 -5 5 -5 h6 q5 0 5 5 V-1 q0 1 -1 1"/>'
         '<path class="ica" d="M0 0 H8 q4 0 4 4 v3 q0 5 -5 5 H1 q-5 0 -5 -5 V1 q0 -1 1 -1"/>'
         '<circle cx="-4" cy="-8" r="1.3" class="iconfill"/>'
         '<circle cx="4" cy="8" r="1.3" class="mintf"/>',
         "Java": '<path class="ic" d="M-11 -1 H8 V5 q0 6 -6 6 h-7 q-6 0 -6 -6 Z"/>'
         '<path class="ic" d="M8 1 h2 q4 0 4 3 0 3 -4 3 h-2"/>'
-        '<path class="steam ica" d="M-5 -6 q-2 -2 0 -4 q2 -2 0 -4"/>'
-        '<path class="steam ica" style="animation-delay:.7s" d="M1 -6 q-2 -2 0 -4 q2 -2 0 -4"/>',
+        '<path class="ica" d="M-5 -6 q-2 -2 0 -4 q2 -2 0 -4"/>'
+        '<path class="ica" d="M1 -6 q-2 -2 0 -4 q2 -2 0 -4"/>',
         "Node.js": f'<polygon points="{_hexagon(13)}" class="ic"/>'
         '<path class="ica" d="M-5 4 V-4 L5 4 V-4"/>',
         "Go": _monogram(doc, "Go", 15),
@@ -61,7 +61,7 @@ def icon(doc: Doc, name: str) -> str:
         '<path class="ica" d="M1 -13 L-5 13"/>',
         "SQL": '<rect x="-12" y="-11" width="24" height="22" rx="3" class="ic"/>'
         '<path class="ic" d="M-12 -4 H12 M-12 3 H12 M-4 -11 V11"/>'
-        '<rect class="sqlrow" x="-12" y="-4" width="24" height="7" fill-opacity=".4"/>',
+        '<rect class="mintf" x="-12" y="-4" width="24" height="7" fill-opacity=".4"/>',
         "PostgreSQL": '<ellipse cy="-8" rx="11" ry="4" class="ic"/>'
         '<path class="ic" d="M-11 -8 V8 q0 4 11 4 11 0 11 -4 V-8"/>'
         '<path class="ica" d="M-11 0 q0 4 11 4 11 0 11 -4"/>',
@@ -105,19 +105,8 @@ def render(theme: Theme) -> str:
         f".tile{{fill:{t.panel};stroke:{t.stroke}}}"
         f".tlit{{stroke:{t.accent};stroke-width:1.5;fill:{t.accent};fill-opacity:.1;opacity:0;"
         f"animation:tlit {LOOP}s ease-in-out infinite}}"
-        "@keyframes tlit{0%{opacity:0}2%,7%{opacity:1}12%,100%{opacity:0}}"
-        ".spin{animation:spin 6s linear infinite}"
-        "@keyframes spin{to{transform:rotate(360deg)}}"
-        f".steam{{animation:steam 2.8s ease-in-out infinite}}"
-        "@keyframes steam{0%,100%{opacity:.25;transform:translateY(1px)}"
-        "50%{opacity:1;transform:translateY(-1px)}}"
-        f".glide{{color:{t.mint};offset-path:path('M-13 9 C-4 9 -4 -9 13 -9');"
-        "animation:glide 3.5s cubic-bezier(.4,0,.2,1) infinite alternate}"
-        "@keyframes glide{to{offset-distance:100%}}"
-        f".sqlrow{{fill:{t.mint};animation:sqlrow 4s steps(1) infinite}}"
-        "@keyframes sqlrow{0%{transform:translateY(0)}33%{transform:translateY(7px)}"
-        "66%{transform:translateY(-7px)}}",
-        ".tlit,.spin,.steam,.glide,.sqlrow{animation:none}.tlit{opacity:0}",
+        "@keyframes tlit{0%{opacity:0}2%,7%{opacity:1}12%,100%{opacity:0}}",
+        ".tlit{animation:none;opacity:0}",
     )
     doc.add(doc.section_header("03", "THE STACK", "FROM INTERFACE TO INDEX"))
 

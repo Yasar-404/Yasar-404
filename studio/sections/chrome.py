@@ -34,13 +34,9 @@ def divider(theme: Theme) -> str:
 def contact(theme: Theme) -> str:
     t = theme
     doc = Doc(t, "Contact: open to full-stack and software engineering roles", 140)
-    doc.style(
-        ".dotp{animation:dotp 2.2s ease-in-out infinite}@keyframes dotp{50%{opacity:.35}}",
-        ".dotp{animation:none}",
-    )
     doc.add(
         doc.section_header("06", "CONTACT"),
-        f'<circle class="dotp" cx="{WIDTH - MARGIN - 4}" cy="40" r="4" fill="{t.mint}"/>',
+        f'<circle cx="{WIDTH - MARGIN - 4}" cy="40" r="4" fill="{t.mint}"/>',
         doc.label_text(WIDTH - MARGIN - 18, 44, "AVAILABLE", "muted", "end", 11, 1.8),
         doc.text(
             MARGIN, 96, "Let's build something that holds up.", "sans", 300, 30, "ink", track=-0.3

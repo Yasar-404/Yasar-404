@@ -60,10 +60,15 @@ def test_motion_is_css_and_honours_reduced_motion(rendered):
             assert "prefers-reduced-motion" in svg, name
 
 
-def test_readme_only_references_assets_that_exist():
+def test_readme_loads_images_directly_from_existing_assets():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
-    for reference in set(re.findall(r"\./assets/[\w-]+\.svg", readme)):
-        assert (ROOT / reference).is_file(), reference
+    # Relative paths go through a github.com redirect, which can add seconds per image.
+    assert "./assets/" not in readme
+    pattern = r"githubusercontent\.com/Yasar-404/Yasar-404/main/assets/([\w-]+\.svg)"
+    names = re.findall(pattern, readme)
+    assert names
+    for name in set(names):
+        assert (ROOT / "assets" / name).is_file(), name
 
 
 def test_tokenizer_classifies_tokens():

@@ -35,6 +35,14 @@ entrance. Everything is CSS because `prefers-reduced-motion` cannot stop SMIL an
 **A 960px canvas.** GitHub's profile column is roughly 830px wide on desktop. Drawing near
 that size keeps small labels legible, where a 1280px canvas would shrink them by a third.
 
+**Direct image URLs.** Relative README images load through a `github.com/.../raw/` redirect
+for every file, so any slowness on github.com delays each image. Absolute
+`raw.githubusercontent.com` URLs skip it.
+
+**A budget for motion.** A running animation makes the browser redo work for that image on
+every frame, even when the change is tiny. Continuous motion is kept to the elements that
+carry meaning, and small decorative loops stay static.
+
 ## Limits
 
 SVG images can't hold hyperlinks or hover states on GitHub, so links wrap the images in the
